@@ -5,7 +5,7 @@ root_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../.."
 
 if [[ "${NAME}" == "" ]]
 then
-    echo -e "\e[32mUsage:\e[39m"
+    echo -e "\033[0;32mUsage:\033[0m"
     echo "  $0 minikube|cluster|dev"
     echo " "
     echo "existing cluster names:"

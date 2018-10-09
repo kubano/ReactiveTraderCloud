@@ -3,8 +3,8 @@
 if [ "${1}" == "" ]
 then
     echo -e ""
-    echo -e "\e[31mBad usage, please try:\e[39m\n${0} <BUILD_ID>"
-    echo -e "\n\e[32mExample:\e[39m\n${0} test1245"
+    echo -e "\e[31mBad usage, please try:\033[0m\n${0} <BUILD_ID>"
+    echo -e "\n\033[0;32mExample:\033[0m\n${0} test1245"
     exit 1
 fi
 

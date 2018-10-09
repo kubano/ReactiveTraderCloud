@@ -21,7 +21,7 @@ listcontains() {
 
 usage() {
     echo " "
-    echo -e "\e[31mUsage:\e[39m"
+    echo -e "\e[31mUsage:\033[0m"
     echo "   prepare COMMAND GROUP BUILD_ID"
     echo " "
     echo " COMMAND can be:"
