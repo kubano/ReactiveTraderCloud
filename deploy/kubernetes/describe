@@ -9,30 +9,30 @@ else  namespace="--namespace=$1"
 fi
 
 echo " "                                       && \
-echo -e "\e[32mCURRENT CLUSTER\e[39m"          && \
+echo -e "\033[0;32mCURRENT CLUSTER\033[0m"          && \
 ${kubectl} config current-context              && \
 echo " "                                       && \
-echo -e "\e[32mNAMESPACE\e[39m"                && \
+echo -e "\033[0;32mNAMESPACE\033[0m"                && \
 echo "$1"                                      && \
 echo " "                                       && \
-echo -e "\e[32mDEPLOYMENTS\e[39m"              && \
+echo -e "\033[0;32mDEPLOYMENTS\033[0m"              && \
 ${kubectl} get deployment $namespace           && \
 echo " "                                       && \
-echo -e "\e[32mSERVICES\e[39m"                 && \
+echo -e "\033[0;32mSERVICES\033[0m"                 && \
 ${kubectl} get services $namespace             && \
 echo " "                                       && \
-echo -e "\e[32mRC\e[39m"                       && \
+echo -e "\033[0;32mRC\033[0m"                       && \
 ${kubectl} get rc $namespace                   && \
 echo " "                                       && \
-echo -e "\e[32mPODS\e[39m"                     && \
+echo -e "\033[0;32mPODS\033[0m"                     && \
 ${kubectl} get pods $namespace -L build        && \
 echo " "                                       && \
-echo -e "\e[32mENDPOINTS\e[39m"                && \
+echo -e "\033[0;32mENDPOINTS\033[0m"                && \
 ${kubectl} get endpoints $namespace            && \
 echo " "                                       && \
-echo -e "\e[32mINGRESS\e[39m"                  && \
+echo -e "\033[0;32mINGRESS\033[0m"                  && \
 ${kubectl} get ingress $namespace              && \
 echo " "                                       && \
-echo -e "\e[32mNODES\e[39m"                    && \
+echo -e "\033[0;32mNODES\033[0m"                    && \
 ${kubectl} get nodes $namespace                && \
 echo " "

@@ -5,8 +5,8 @@ if  [ "${1}" == "" ] ||
     [ "${3}" == "" ]
 then
     echo -e ""
-    echo -e "\e[31mBad usage, please try:\e[39m\n${0} <NAMESPACE> <SERVICE> <BUILD_NUMBER>"
-    echo -e "\n\e[32mExample:\e[39m\n${0} dev web test1245"
+    echo -e "\e[31mBad usage, please try:\033[0m\n${0} <NAMESPACE> <SERVICE> <BUILD_NUMBER>"
+    echo -e "\n\033[0;32mExample:\033[0m\n${0} dev web test1245"
     exit 1
 fi
 
@@ -27,7 +27,7 @@ sleep 10
 ${deploy_folder}/kubernetes/describe ${namespace}
 
 echo " "
-echo -e "\e[34mservice: \e[39m ${service}-${build_number}"
-echo -e "\e[34mstart:   \e[39m $start_time"
-echo -e "\e[34mend:     \e[39m `date`"
+echo -e "\e[34mservice: \033[0m ${service}-${build_number}"
+echo -e "\e[34mstart:   \033[0m $start_time"
+echo -e "\e[34mend:     \033[0m `date`"
 echo " "

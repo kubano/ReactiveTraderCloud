@@ -1,6 +1,6 @@
 #! /bin/bash
 if [[ $1 == "" ]];then
-  echo -e "\e[32mUsage:\e[39m"
+  echo -e "\033[0;32mUsage:\033[0m"
   echo "  $0 BUILD"
   echo " "
   exit 1

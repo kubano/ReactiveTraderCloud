@@ -6,8 +6,7 @@ if [[ $1 == "" ]];then
 fi
 build=$1
 
-# fail fast
-set -euo pipefail
+set -eo pipefail
 
 echo ""
 echo "============================="

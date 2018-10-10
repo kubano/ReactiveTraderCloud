@@ -4,8 +4,8 @@
 set -euo pipefail
 
 if [[ $# < 3 ]];then
-  echo -e "\e[32mUsage:  \e[39m $0 NAMESPACE SERVICE NEW_COUNT"
-  echo -e "\e[32mExample:\e[39m $0 demo web 2"
+  echo -e "\033[0;32mUsage:  \033[0m $0 NAMESPACE SERVICE NEW_COUNT"
+  echo -e "\033[0;32mExample:\033[0m $0 demo web 2"
   exit 1
 fi
 namespace=$1

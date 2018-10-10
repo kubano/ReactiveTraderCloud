@@ -6,8 +6,7 @@ if [[ $1 == "" ]];then
 fi
 build=$1
 
-# fail fast
-set -euo pipefail
+set -eo pipefail
 
 echo ""
 echo "==============================="
@@ -15,4 +14,13 @@ echo "Build ReactiveTrader containers"
 echo ""
 
 root_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../.."
-${root_directory}/deploy/docker/prepare build rtc $build
+
+source ${root_directory}/deploy/touched.sh
+
+for container in ${BUILD_LIST[@]}
+do
+  ${root_directory}/deploy/docker/prepare build $container $build
+done
+
+
+

@@ -2,7 +2,7 @@
 
 usage() {
   echo " "
-  echo -e "\e[32mUsage:\e[39m"
+  echo -e "\033[0;32mUsage:\033[0m"
   echo " "
   echo "    deploy NAMESPACE [BUILD_ID]"
   echo " "
